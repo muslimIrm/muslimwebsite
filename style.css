@@ -284,6 +284,7 @@ footer {
     .header-content {
         flex-direction: column;
         padding: 0.5rem 0;
+        position: none;
     }
 
     .navigation a {

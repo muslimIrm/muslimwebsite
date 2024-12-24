@@ -284,7 +284,8 @@ footer {
     .header-content {
         flex-direction: column;
         padding: 0.5rem 0;
-        position: none;
+        position: relative;
+        
     }
 
     .navigation a {
@@ -301,7 +302,7 @@ footer {
 
     .homeSection {
         height: 20rem;
-        margin-top: 16rem;
+        margin:0;
     }
 
     .title h1 {

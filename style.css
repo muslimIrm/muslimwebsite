@@ -1,0 +1,323 @@
+body, html {
+    font-family: "Tajawal", serif;
+    direction: rtl;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.main-header {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(63, 114, 175, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    padding: 0 1rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* لتوزيع العناصر بشكل مناسب على الشاشات الصغيرة */
+}
+
+.navigation a {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1rem; /* حجم مناسب */
+    padding: 0.8rem 1.2rem; /* تقليص الحشو ليكون مريح */
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    margin: 0.3rem;
+}
+
+.navigation a:hover {
+    border-bottom: 1px solid black;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.homeSection {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 30rem;
+    background-image: url('minPhoto.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1);
+}
+
+.homeSection .continer {
+    padding-top: 6rem;
+    padding-right: 2rem;
+    color: black;
+    font-weight: bold;
+    transform: scaleX(-1);
+}
+
+.homeSection .continer h1 {
+    font-size: 2.5rem;
+}
+
+.homeSection .continer h2 {
+    font-size: 1.2rem;
+    padding-bottom: 3rem;
+}
+
+.homeSection .continer .info a {
+    background-color: rgb(53, 104, 165);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+    width: 100%;
+    text-decoration: none;
+}
+
+.homeSection .continer .info a:hover {
+    font-size: 1.65rem;
+    background-color: rgb(53, 104, 165);
+    color: #e9f5ff;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(63, 114, 175);
+    padding-top: 1rem;
+}
+
+.title h1 {
+    font-size: 2rem;
+    color: rgb(63, 114, 175);
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    transition: transform 0.5s ease;
+    box-shadow: 0px 4px 5px rgba(40, 40, 40, 0.26);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 12rem;
+}
+
+.about .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .info h3 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    width: 50rem;
+    text-align: center;
+}
+
+.projects .continer {
+    width: 100%;
+    background-color: rgb(63, 114, 175);
+    padding-bottom: 2rem;
+}
+.caont .card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 2rem;
+}
+
+.caont .card .icon {
+    font-size: 50px;
+    color: rgb(63, 114, 175);
+    margin-bottom: 10px;
+}
+
+.caont .card .title {
+    font-size: 24px;
+    color: rgb(63, 114, 175);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.caont .card .info {
+    font-size: 16px;
+    color: #555;
+}
+footer {
+    background-color: rgb(29, 47, 75);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1200px) {
+    .homeSection .continer {
+        padding-right: 4rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .navigation a {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .homeSection .continer {
+        padding-right: 2rem;
+    }
+
+    .navigation a {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .title h1 {
+        font-size: 1.8rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0.5rem 1rem; /* تعديل الحواف لتناسب الحجم */
+    }
+
+    .homeSection {
+        height: 25rem;
+        margin-top: 6.5rem;
+    }
+
+    .homeSection .continer {
+        padding-top: 4rem;
+        padding-right: 1rem;
+    }
+
+    .title h1 {
+        font-size: 1.6rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navigation a {
+        font-size: 1.3rem;
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+
+    .navigation a {
+        font-size: 1rem;
+        padding: .6rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .homeSection .continer {
+        padding-right: 1rem;
+       
+    }
+
+    .homeSection {
+        height: 20rem;
+        margin-top: 16rem;
+    }
+
+    .title h1 {
+        font-size: 1.4rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
